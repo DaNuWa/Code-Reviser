@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C7FAEA8-B6D7-453E-A8A7-34A436CC44E1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rapid</RootNamespace>
+    <AssemblyName>Rapid</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
+      <HintPath>..\..\..\..\..\Desktop\rapid\Bunifu UI WinForms 1.6.0.0\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Desktop\rapid\Bunifu UI WinForms 1.6.0.0\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis">
+      <HintPath>..\packages\Google.Apis.1.22.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth">
+      <HintPath>..\packages\Google.Apis.Auth.1.22.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices">
+      <HintPath>..\packages\Google.Apis.Auth.1.22.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core">
+      <HintPath>..\packages\Google.Apis.Core.1.22.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v1">
+      <HintPath>..\packages\Google.Apis.Drive.v1.1.13.1.505\lib\portable-net45+netcore45+wpa81+wp8\Google.Apis.Drive.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.FirebaseRulesAPI.v1">
+      <HintPath>..\packages\Google.Apis.FirebaseRulesAPI.v1.1.22.0.771\lib\net45\Google.Apis.FirebaseRulesAPI.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices">
+      <HintPath>..\packages\Google.Apis.1.22.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Fabric.Plugin">
+      <HintPath>..\packages\MySql.Fabric.6.9.12\lib\net45\MySql.Fabric.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=1.6.30117.9648, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zlib.Portable">
+      <HintPath>..\packages\Zlib.Portable.Signed.1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutus.Designer.cs">
+      <DependentUpon>aboutus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="csharpcodestwoone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="csharpcodestwoone.Designer.cs">
+      <DependentUpon>csharpcodestwoone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="firstfirst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="firstfirst.Designer.cs">
+      <DependentUpon>firstfirst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="firstinterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="firstinterface.Designer.cs">
+      <DependentUpon>firstinterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goal.Designer.cs">
+      <DependentUpon>goal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="javacodestwoone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="javacodestwoone.Designer.cs">
+      <DependentUpon>javacodestwoone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loadingscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loadingscreen.Designer.cs">
+      <DependentUpon>Loadingscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="next.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="next.Designer.cs">
+      <DependentUpon>next.cs</DependentUpon>
+    </Compile>
+    <Compile Include="opencodescplusfirstsem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opencodescplusfirstsem.Designer.cs">
+      <DependentUpon>opencodescplusfirstsem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="openjavasecondsemfirstyear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openjavasecondsemfirstyear.Designer.cs">
+      <DependentUpon>openjavasecondsemfirstyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="openpasspaerfive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openpasspaerfive.Designer.cs">
+      <DependentUpon>openpasspaerfive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="openpastpaers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openpastpaers.Designer.cs">
+      <DependentUpon>openpastpaers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="openpastpapersfour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openpastpapersfour.Designer.cs">
+      <DependentUpon>openpastpapersfour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="openpastpaperssix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openpastpaperssix.Designer.cs">
+      <DependentUpon>openpastpaperssix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="openpastpapersthree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openpastpapersthree.Designer.cs">
+      <DependentUpon>openpastpapersthree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="openpastpaperstwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openpastpaperstwo.Designer.cs">
+      <DependentUpon>openpastpaperstwo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="openshellscriptandc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openshellscriptandc.Designer.cs">
+      <DependentUpon>openshellscriptandc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pastpapers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pastpapers.Designer.cs">
+      <DependentUpon>pastpapers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="roundbutton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="samplecodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="samplecodes.Designer.cs">
+      <DependentUpon>samplecodes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="aboutus.resx">
+      <DependentUpon>aboutus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="csharpcodestwoone.resx">
+      <DependentUpon>csharpcodestwoone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="firstfirst.resx">
+      <DependentUpon>firstfirst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="firstinterface.resx">
+      <DependentUpon>firstinterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goal.resx">
+      <DependentUpon>goal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="javacodestwoone.resx">
+      <DependentUpon>javacodestwoone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loadingscreen.resx">
+      <DependentUpon>Loadingscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="next.resx">
+      <DependentUpon>next.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opencodescplusfirstsem.resx">
+      <DependentUpon>opencodescplusfirstsem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="openjavasecondsemfirstyear.resx">
+      <DependentUpon>openjavasecondsemfirstyear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="openpasspaerfive.resx">
+      <DependentUpon>openpasspaerfive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="openpastpaers.resx">
+      <DependentUpon>openpastpaers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="openpastpapersfour.resx">
+      <DependentUpon>openpastpapersfour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="openpastpaperssix.resx">
+      <DependentUpon>openpastpaperssix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="openpastpapersthree.resx">
+      <DependentUpon>openpastpapersthree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="openpastpaperstwo.resx">
+      <DependentUpon>openpastpaperstwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="openshellscriptandc.resx">
+      <DependentUpon>openshellscriptandc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pastpapers.resx">
+      <DependentUpon>pastpapers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="samplecodes.resx">
+      <DependentUpon>samplecodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="credentials.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20180214-WA0017.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
